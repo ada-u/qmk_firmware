@@ -1,4 +1,5 @@
 keyboard/planck/dfu-programmer.exe
+.idea
 .dep
 *.o
 *.eep
