@@ -16,20 +16,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * | Esc    |   1  |   2  |   3  |   4  |   5  | `~   |           | `~   |   6  |   7  |   8  |   9  |   0  |   -    |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * | Tab    |   Q  |   W  |   E  |   R  |   T  |      |           | LFn  |   Y  |   U  |   I  |   O  |   P  |   \    |
+ * | Tab    |   Q  |   W  |   E  |   R  |   T  |      |           |  ↑   |   Y  |   U  |   I  |   O  |   P  |   \    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * | CTRL   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  | K/Gui|   L  |   ;  |   '"   |
- * |--------+------+------+------+------+------|  +L1 |           |LMouse|------+------+------+------+------+--------|
+ * | CTRL   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  |   '"   |
+ * |--------+------+------+------+------+------|  +L1 |           |  ↓   |------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   /  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |      |      | Latl | LGui |      |                                       |  Up  | Down |   [  |   ]  | LWin  |
+ *   |      |      | Latl | LGui |      |                                       |   =  | CTRL |      |      | BSpace |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        |  ←   |   →  |       | Alt  | Esc  |
+ *                                        |  ←   |   →  |       |  [   |   ]  |
  *                                 ,------|------|------|       |------+--------+------.
- *                                 |      |      |      |       | PgUp |        |      |
- *                                 |Space |LShift|------|       |------| Enter  |Space |
- *                                 |      |      |      |       | PgDn |        |      |
+ *                                 |      |      |      |       |      |        |      |
+ *                                 |Space |LShift|------|       |------| Space  |Enter |
+ *                                 |      |      |      |       |      |        |      |
  *                                 `--------------------'       `----------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
@@ -46,13 +46,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                KC_SPC,KC_LSFT,KC_TRNS,
         // right hand
              KC_GRV,      KC_6,   KC_7,   KC_8,   KC_9,   KC_0,             KC_MINS,
-             MO(FN),      KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,             KC_BSLS,
+             KC_UP,       KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,             KC_BSLS,
                           KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN,          KC_QUOT,
-             TO(MOUSE,1), KC_N,   KC_M,   KC_COMM,KC_DOT, KC_SLSH,          KC_RSFT,
-                                  KC_UP,  KC_DOWN,KC_LBRC,KC_RBRC,          TO(WINDOWS,1),
-             KC_LALT,        KC_ESC,
-             KC_PGUP,
-             KC_PGDN,KC_ENT, KC_SPC
+             KC_DOWN,     KC_N,   KC_M,   KC_COMM,KC_DOT, KC_SLSH,          KC_RSFT,
+                                  KC_EQL, KC_RCTL,KC_TRNS,KC_TRNS,          KC_BSPC,
+             KC_LBRC,        KC_RBRC,
+             KC_TRNS,
+             KC_TRNS,KC_SPC, KC_ENT
     ),
 
 /* Keymap 1: Windows layer
