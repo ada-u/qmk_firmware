@@ -1,7 +1,7 @@
 // modified following file.
 // https://github.com/msc654/qmk_firmware/blob/master/keyboard%2Fergodox_ez%2Fkeymaps%2Fdefault%2Fkeymap.c
 
-#include "ergodox_ez.h"
+#include "ergodox.h"
 #include "debug.h"
 #include "action_layer.h"
 
@@ -20,13 +20,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|TO(L1)|           |  ↓   |------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   /  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |      |      | Latl | LGui |      |                                       |   =  | CTRL |      |      | BSpace |
+ *   |      |      | Latl | LGui | MHEN |                                       |   =  | CTRL |      |      | BSpace |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        |  ←   |   →  |       |  [   |   ]  |
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      |      |       |      |        |      |
- *                                 |Space |LShift|------|       |------| Space  |Enter |
+ *                                 |Space |LShift|------|       |------| HENKAN |Enter |
  *                                 |      |      |      |       |      |        |      |
  *                                 `--------------------'       `----------------------'
  */
@@ -38,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,         KC_Q,         KC_W,        KC_E,      KC_R,   KC_T,   KC_TRNS,
         KC_LCTL,        KC_A,         KC_S,        KC_D,      KC_F,   KC_G,
         KC_LSFT,        KC_Z,         KC_X,        KC_C,      KC_V,   KC_B,   MO(FN),
-        KC_TRNS,        KC_TRNS,      KC_LALT,     KC_LGUI,   KC_TRNS,
+        KC_TRNS,        KC_TRNS,      KC_LALT,     KC_LGUI,   KC_MHEN,
                                                                KC_LEFT,       KC_RGHT,
                                                                               KC_TRNS,
                                                                KC_SPC,KC_LSFT,KC_TRNS,
@@ -50,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                              KC_EQL, KC_RCTL,KC_TRNS,KC_TRNS,          KC_BSPC,
         KC_LBRC,        KC_RBRC,
         KC_TRNS,
-        KC_TRNS,KC_SPC, KC_ENT
+        KC_TRNS,KC_HENK, KC_ENT
     ),
 
 /* Keymap 1: FN
